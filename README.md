@@ -36,8 +36,6 @@ The current implementation also enables image mirroring during compression (`MIR
 | `uoft.bmp` | Sample bitmap image |
 | `toronto-children.png` | 600 × 396 PNG reference asset for comparison/documentation |
 
-`toronto-children.png` is not used by the BMP compression pipeline.
-
 ## How the Compression Works
 
 ### 1. BMP loading
@@ -233,7 +231,7 @@ python -m doctest -v a2files.py
 Notes:
 
 - No `pytest`-based test suite is configured in this repository.
-- Running `python a2tree.py` executes doctests successfully but then fails on the optional `python_ta` import if that package is not installed.
+- Running `python a2tree.py` executes the doctests and then attempts an additional `python_ta` check. Install `python_ta` only if you want to run that extra development-time validation step.
 
 ## Current Limitations
 
