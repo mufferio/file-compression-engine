@@ -34,7 +34,9 @@ The current implementation also enables image mirroring during compression (`MIR
 | `dog.bmp` | Sample bitmap image |
 | `toronto.bmp` | Sample bitmap image |
 | `uoft.bmp` | Sample bitmap image |
-| `toronto-children.png` | 600 × 396 PNG reference asset included for comparison/documentation; it is not used by the BMP compression pipeline |
+| `toronto-children.png` | 600 × 396 PNG reference asset for comparison/documentation |
+
+`toronto-children.png` is not used by the BMP compression pipeline.
 
 ## How the Compression Works
 
