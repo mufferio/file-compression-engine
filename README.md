@@ -231,7 +231,7 @@ python -m doctest -v a2files.py
 Notes:
 
 - No `pytest`-based test suite is configured in this repository.
-- Running `python a2tree.py` executes the doctests and then attempts an additional `python_ta` check. Install `python_ta` only if you want to run that extra development-time validation step.
+- Running `python a2tree.py` executes the doctests and then attempts an additional `python_ta` check. Install `python_ta` with `pip install python-ta` only if you want to run that extra development-time validation step.
 
 ## Current Limitations
 
