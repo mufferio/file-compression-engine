@@ -12,7 +12,7 @@ This repository implements a small image-compression pipeline centered on a quad
 4. The tree is serialized into a custom `.qdt` file that preserves the original BMP header.
 5. The `.qdt` file can be decompressed back into a grayscale BMP image.
 
-The current implementation also enables image mirroring during compression (`MIRROR_IMG = True`), so the reconstructed image mirrors the bottom half into the top half.
+The current implementation also enables image mirroring during compression (`MIRROR_IMG = True`), so the reconstructed image replaces the original top half with a vertically flipped copy of the bottom half.
 
 ## Key Capabilities
 
@@ -228,7 +228,7 @@ python -m doctest -v a2files.py
 
 Notes:
 
-- `pytest` is not installed in the current environment.
+- No `pytest`-based test suite is configured in this repository.
 - Running `python a2tree.py` executes doctests successfully but then fails on the optional `python_ta` import if that package is not installed.
 
 ## Current Limitations
