@@ -27,14 +27,14 @@ The current implementation also enables image mirroring during compression (`MIR
 
 | Path | Purpose |
 | --- | --- |
-| `/tmp/workspace/mufferio/file-compression-engine/a2main.py` | CLI entry point plus `Compressor` and `Decompressor` orchestration logic |
-| `/tmp/workspace/mufferio/file-compression-engine/a2tree.py` | Core quadtree implementation, compression logic, traversal, restore, and loss analysis |
-| `/tmp/workspace/mufferio/file-compression-engine/a2files.py` | BMP/QDT file parsing, metadata extraction, serialization, and persistence |
-| `/tmp/workspace/mufferio/file-compression-engine/test.py` | Small local script for manually inspecting quadtree structure |
-| `/tmp/workspace/mufferio/file-compression-engine/dog.bmp` | Sample bitmap image |
-| `/tmp/workspace/mufferio/file-compression-engine/toronto.bmp` | Sample bitmap image |
-| `/tmp/workspace/mufferio/file-compression-engine/uoft.bmp` | Sample bitmap image |
-| `/tmp/workspace/mufferio/file-compression-engine/toronto-children.png` | Additional image asset |
+| `a2main.py` | CLI entry point plus `Compressor` and `Decompressor` orchestration logic |
+| `a2tree.py` | Core quadtree implementation, compression logic, traversal, restore, and loss analysis |
+| `a2files.py` | BMP/QDT file parsing, metadata extraction, serialization, and persistence |
+| `test.py` | Small local script for manually inspecting quadtree structure |
+| `dog.bmp` | Sample bitmap image |
+| `toronto.bmp` | Sample bitmap image |
+| `uoft.bmp` | Sample bitmap image |
+| `toronto-children.png` | Additional image asset |
 
 ## How the Compression Works
 
@@ -72,7 +72,7 @@ If a region is empty, it becomes `QuadTreeNodeEmpty`.
 
 ### 4. Mirroring
 
-After the tree is built, the current code mirrors the image by copying the bottom half into the top half. This behavior is controlled by `MIRROR_IMG` in `/tmp/workspace/mufferio/file-compression-engine/a2main.py` and is currently set to `True`.
+After the tree is built, the current code mirrors the image by copying the bottom half into the top half. This behavior is controlled by `MIRROR_IMG` in `a2main.py` and is currently set to `True`.
 
 ### 5. Serialization
 
@@ -128,7 +128,7 @@ The project is **lossy** for two reasons:
 Run:
 
 ```bash
-python /tmp/workspace/mufferio/file-compression-engine/a2main.py
+python a2main.py
 ```
 
 You will be prompted to:
@@ -222,14 +222,14 @@ The repository currently contains doctests in the core modules.
 Verified commands:
 
 ```bash
-python -m doctest -v /tmp/workspace/mufferio/file-compression-engine/a2tree.py
-python -m doctest -v /tmp/workspace/mufferio/file-compression-engine/a2files.py
+python -m doctest -v a2tree.py
+python -m doctest -v a2files.py
 ```
 
 Notes:
 
 - `pytest` is not installed in the current environment.
-- Running `python /tmp/workspace/mufferio/file-compression-engine/a2tree.py` executes doctests successfully but then fails on the optional `python_ta` import if that package is not installed.
+- Running `python a2tree.py` executes doctests successfully but then fails on the optional `python_ta` import if that package is not installed.
 
 ## Current Limitations
 
