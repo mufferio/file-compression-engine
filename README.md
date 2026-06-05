@@ -124,7 +124,7 @@ The project is **lossy** for two reasons:
 
 ### Requirements
 
-- Python 3.12 validated (the project uses standard-library-only runtime code and should also work on nearby Python 3 versions)
+- Python 3.12 validated (compatibility with other Python versions has not been explicitly tested)
 - No required third-party runtime dependency for compression/decompression
 
 ### CLI usage
