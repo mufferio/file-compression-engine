@@ -34,7 +34,7 @@ The current implementation also enables image mirroring during compression (`MIR
 | `dog.bmp` | Sample bitmap image |
 | `toronto.bmp` | Sample bitmap image |
 | `uoft.bmp` | Sample bitmap image |
-| `toronto-children.png` | Additional image asset |
+| `toronto-children.png` | 600 × 396 PNG reference asset included for comparison/documentation; it is not used by the BMP compression pipeline |
 
 ## How the Compression Works
 
@@ -91,6 +91,8 @@ Example preorder:
 
 `,E,5,8,E`
 
+The leading comma is expected: it represents the root internal node, whose preorder token is an empty string.
+
 ## Compression Model
 
 The project is **lossy** for two reasons:
@@ -120,7 +122,7 @@ The project is **lossy** for two reasons:
 
 ### Requirements
 
-- Python 3
+- Python 3.12 validated (the project uses standard-library-only runtime code and should also work on nearby Python 3 versions)
 - No required third-party runtime dependency for compression/decompression
 
 ### CLI usage
